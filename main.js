@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
-const express = require('express');
-const axios = require('axios');
+import express from 'express';
+import axios 'axios';
 import { fal}  from '@fal-ai/client'
 
 const app = express();
