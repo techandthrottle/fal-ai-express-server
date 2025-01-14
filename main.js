@@ -1,4 +1,4 @@
-require('dotenv').config();
+import dotenv from 'dotenv';
 const express = require('express');
 const axios = require('axios');
 import { fal}  from '@fal-ai/client'
@@ -6,7 +6,7 @@ import { fal}  from '@fal-ai/client'
 const app = express();
 const port = process.env.PORT || 3000;
 app.use(express.json())
-
+dotenv.config()
 
 fal.config({
     credentials: process.env.FAL_API_KEY
