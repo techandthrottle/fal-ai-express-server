@@ -14,9 +14,9 @@ fal.config({
 
 app.post('/api/generate-broll', async (req, res) => {
     try {
-        const { prompt, modelId, webhookUrl } = req.body;
-        if (!prompt || !modelId || !webhookUrl) {
-            return res.status(400).json({ error: 'Prompt, Model ID, and Webhook URL are required.' });
+        const { prompt, webhookUrl } = req.body;
+        if (!prompt || !webhookUrl) {
+            return res.status(400).json({ error: 'Prompt and Webhook URL are required.' });
         }
 
         const { request_id } = await fal.queue.submit("fal-ai/minimax/video-01-live", {
