@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 import express from 'express';
-import axios 'axios';
-import { fal}  from '@fal-ai/client'
+import axios from 'axios';
+import { fal }  from '@fal-ai/client'
 
 const app = express();
 const port = process.env.PORT || 3000;
