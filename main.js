@@ -30,7 +30,7 @@ app.post('/api/generate-broll', async (req, res) => {
     catch (error) {
         console.error(error);
         res.status(500).json({ error: 'An error occurred while generating the b-roll.' });
-    }s
+    }
 })
 
 
