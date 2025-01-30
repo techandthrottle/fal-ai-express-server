@@ -36,7 +36,7 @@ app.post('/api/fal-ai/minimax/video-01-live', async (req, res) => {
 app.post('/api/f5-tts', async (req, res) => {
     try {
         const { text, refAudioUrl, webhookUrl } = req.body;
-        if (!text || refAudioUrl || !webhookUrl) {
+        if (!text || !refAudioUrl || !webhookUrl) {
             return res.status(400).json({ error: 'Text, Reference Audio URL and Webhook URL are required.' });
         }
 
